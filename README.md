@@ -4,12 +4,6 @@ We implement a verion of Thisletwaite's algorithm along with pattern database te
 
 This project is done with my coding partner Conan Wu (conanwu777), written in C++ with OpenGL visualizer.
 
-## Showcase Video
-[![Rubik Video](screenshots/2.png)](https://www.youtube.com/watch?v=KKVDuF6clww "Thistlethwaite Rubik's Solver")
-
-## Screenshot
-![alt text](screenshots/3.png)
-
 ## How it works
 
 We use a Pattern Database idea much like that in [Korf's paper](https://www.aaai.org/Papers/AAAI/1997/AAAI97-109.pdf) where we hash equivlence classes of the cube states at each of the 4 stages into files and use those files to look-up our cube configurations at the stages. within each stage we use simple BFS to get optimal path into the next stage. The breakdown into subgroups ensures that at each stage the size of the graph and the branching factor is reasonable and BFS does not go for more than 11 steps.
